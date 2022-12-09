@@ -47,7 +47,7 @@ namespace FunctionApp1
         [FunctionName("ShortenUrl")]
         public async Task<IActionResult> ShortenUrl(
        [HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestMessage req,
-       [Table("urls1", "1", "KEYS", Take = 1)] NextId keyTable)
+       [Table("urls1", "1", "KEY", Take = 1)] NextId keyTable)
         {
             if (req == null)
             {
